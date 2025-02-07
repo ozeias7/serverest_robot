@@ -18,11 +18,11 @@ Cenário 01: Validando cenário de login valido
     E vejo o texto "Serverest Store"
     Então saio do Serverest
 
-# Cenário 02: Validando cenário de login invalido
-#     [Tags]       login_02
-#     Dado que o usuario esteja na pagina de login do serverest
-#     Quando inserir as credenciais invalidas e logar
-#     Então devo ver a mensagem de erro
+Cenário 02: Validando cenário de login invalido
+    [Tags]       login_02
+    Dado que o usuario esteja na pagina de login do serverest
+    # Quando inserir as credenciais invalidas e logar
+    # Então devo ver a mensagem de erro
 
 # Cenário 03: Validando cenário usuario valido e senha invalida
 #     [Tags]       login_03
