@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.2 on win32)" generated="2025-02-07T00:26:17.090863" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Teste" source="C:\serverest_robot\Tests\login_teste.robot">
+<test id="s1-t1" name="Cenário 01: Validando cenário de login valido" line="14">
+<kw name="Abrir o Navegador" owner="resources" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-07T00:26:17.192608" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-07T00:26:17.192494" elapsed="1.439287"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-07T00:26:18.631939" elapsed="0.029423"/>
+</kw>
+<status status="PASS" start="2025-02-07T00:26:17.192106" elapsed="1.469356"/>
+</kw>
+<kw name="Dado que o usuario esteja na pagina de login do serverest" owner="login_Page">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-07T00:26:18.662029" level="INFO">Opening url 'https://front.serverest.dev/login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-07T00:26:18.661935" elapsed="1.907313"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TEXTO_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-07T00:26:20.569399" elapsed="0.015332"/>
+</kw>
+<status status="PASS" start="2025-02-07T00:26:18.661744" elapsed="1.923080"/>
+</kw>
+<kw name="Quando inserir as credenciais e logar" owner="login_Page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-07T00:26:20.585245" elapsed="0.013244"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-07T00:26:20.598783" level="INFO">Typing text 'ozeias.nnascimento@gmail.com' into text field '//input[contains(@name,'email')]'.</msg>
+<arg>${EMAIL}</arg>
+<arg>ozeias.nnascimento@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-07T00:26:20.598624" elapsed="0.120457"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SENHA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-07T00:26:20.719219" elapsed="0.012033"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-07T00:26:20.731554" level="INFO">Typing text '123456' into text field '//input[contains(@name,'password')]'.</msg>
+<arg>${SENHA}</arg>
+<arg>123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-07T00:26:20.731393" elapsed="0.042358"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_ENTRAR}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-07T00:26:20.773906" elapsed="0.011353"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-07T00:26:20.785551" level="INFO">Clicking element '//button[@data-testid='entrar'][contains(.,'Entrar')]'.</msg>
+<arg>${BTN_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-07T00:26:20.785399" elapsed="0.046016"/>
+</kw>
+<status status="PASS" start="2025-02-07T00:26:20.585064" elapsed="0.246458"/>
+</kw>
+<kw name="E vejo o texto &quot;Serverest Store&quot;" owner="login_Page" source_name="E vejo o texto &quot;${TEXTO}&quot;">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${TEXTO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-07T00:26:20.832042" elapsed="1.508371"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-07T00:26:22.464833" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-07T00:26:22.340721" elapsed="0.124191"/>
+</kw>
+<status status="PASS" start="2025-02-07T00:26:20.831798" elapsed="1.633185"/>
+</kw>
+<kw name="Então saio do Serverest" owner="home_Page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_LOGOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-07T00:26:22.465373" elapsed="0.012397"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-07T00:26:22.677488" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-07T00:26:22.477917" elapsed="0.199654"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-07T00:26:22.677864" level="INFO">Clicking element '//button[@data-testid='logout'][contains(.,'Logout')]'.</msg>
+<arg>${BTN_LOGOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-07T00:26:22.677714" elapsed="0.091956"/>
+</kw>
+<status status="PASS" start="2025-02-07T00:26:22.465201" elapsed="0.304568"/>
+</kw>
+<kw name="Fechar o Navegdor" owner="resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-02-07T00:26:23.069623" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-02-07T00:26:22.770309" elapsed="0.299417"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-07T00:26:23.069846" elapsed="2.151149"/>
+</kw>
+<status status="PASS" start="2025-02-07T00:26:22.770118" elapsed="2.451022"/>
+</kw>
+<tag>login_01</tag>
+<status status="PASS" start="2025-02-07T00:26:17.191666" elapsed="8.029741"/>
+</test>
+<status status="PASS" start="2025-02-07T00:26:17.091797" elapsed="8.130210"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">login_01</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Teste">Login Teste</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-07T00:26:17.088208" level="WARN">Error in file 'C:\serverest_robot\Tests\login_teste.robot' on line 13: Singular section headers like '*** Test Case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+</errors>
+</robot>
