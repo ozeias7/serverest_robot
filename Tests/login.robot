@@ -21,17 +21,17 @@ Cenário 01: Validando cenário de login valido
 Cenário 02: Validando cenário de login invalido
     [Tags]       login_02
     Dado que o usuario esteja na pagina de login do serverest
-    # Quando inserir as credenciais invalidas e logar
-    # Então devo ver a mensagem de erro
+    Quando inserir as credenciais invalidas e logar
+    E vejo o texto "Email e/ou senha inválidos"
+    
+Cenário 03: Validando cenário usuario valido e senha invalida
+    [Tags]       login_03
+    Dado que o usuario esteja na pagina de login do serverest
+    Quando inserir usuario valido e senha invalida
+    E vejo o texto "Email e/ou senha inválidos"
 
-# Cenário 03: Validando cenário usuario valido e senha invalida
-#     [Tags]       login_03
-#     Dado que o usuario esteja na pagina de login do serverest
-#     Quando inserir usuario valido e senha invalida
-#     Então devo ver a mensagem de erro
-
-# Cenário 04: Validando cenário usuario invalido e senha valida
-#     [Tags]       login_04
-#     Dado que o usuario esteja na pagina de login do serverest
-#     Quando inserir usuario invalido e senha valida
-#     Então devo ver a mensagem de erro
+Cenário 04: Validando cenário usuario invalido e senha valida
+    [Tags]       login_04
+    Dado que o usuario esteja na pagina de login do serverest
+    Quando inserir usuario invalido e senha valida
+    E vejo o texto "Email e/ou senha inválidos"
