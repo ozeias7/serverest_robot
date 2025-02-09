@@ -21,4 +21,4 @@ jobs:
 
       - name: Execução dos Testes WEB
         run:
-          robot -d Resultados login.robot
+          robot -d Resultados .\Tests\login.robot
