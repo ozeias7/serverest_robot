@@ -54,7 +54,7 @@ Quando inserir usuario invalido e senha valida
      Wait Until Element Is Visible      ${EMAIL}
     Input Text                          ${EMAIL}              ozeias.teste@gmail.com
     Wait Until Element Is Visible       ${SENHA}
-    Input Text                          ${SENHA}               123456
+    Input Text                          ${SENHA}              741852
     Wait Until Element Is Visible       ${BTN_ENTRAR}
     Click Element                       ${BTN_ENTRAR}
     
