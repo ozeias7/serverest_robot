@@ -22,14 +22,14 @@ Cenário 01: Realizar compra de produto com sucesso
     Então vejo o texto "Em construção aguarde"
 
 Cenário 02: Limpar lista de produto com sucesso
-    [Tags]       login_01
+    [Tags]       login_02
     Dado que o usuario esteja na pagina de login do serverest
     Quando inserir as credenciais e logar
     E incluo o produto na cesta
     E limpo a cesta de produtos
 
 Cenário 03: Adiciono mais um item na cesta de produto com sucesso
-    [Tags]       login_01
+    [Tags]       login_03
     Dado que o usuario esteja na pagina de login do serverest
     Quando inserir as credenciais e logar
     E incluo o produto na cesta
