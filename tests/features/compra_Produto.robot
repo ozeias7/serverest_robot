@@ -1,11 +1,11 @@
 *** Settings ***
 
-Resource            ../Resources/ambiente.robot
-Resource            ../Resources/resources.robot
-Resource            ../Pages/login_Page.robot
-Resource            ../Pages/home_Page.robot
-Resource            ../Pages/minhasListaDeProduto_Page.robot
-Resource            ../Pages/carrinho_Page.robot
+Resource            ../../Resources/ambiente.robot
+Resource            ../../Resources/keywords.robot
+Resource            ../step_definitions/login_steps.robot
+Resource            ../step_definitions/home_steps.robot
+Resource            ../step_definitions/minhasListaDeProduto_steps.robot
+Resource            ../step_definitions/carrinho_steps.robot
 
 Test Setup            Abrir o Navegador
 Test Teardown         Fechar o Navegdor

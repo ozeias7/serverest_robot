@@ -2,9 +2,10 @@
 Library            SeleniumLibrary  
 Library            String
 
-Resource            ../Resources/ambiente.robot
-Resource            ../Resources/resources.robot
-Resource            ../Pages/home_Page.robot
+
+Resource            ../../Resources/ambiente.robot
+Resource            ../../Resources/keywords.robot
+Resource            ../step_definitions/home_steps.robot
 
 *** Variables ***
 
