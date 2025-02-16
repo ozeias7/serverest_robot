@@ -1,44 +1,25 @@
-name: Run Robot Framework Tests
+name: Pipeline Test
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: push
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
+      - name: Clonagem do Projeto
         uses: actions/checkout@v3
 
-      - name: Configurar Python
+      - name: Configuração do Pyton
         uses: actions/setup-python@v2
         with:
           python-version: '3.13'
-
-      - name: Instalar dependências
+    
+      - name: Instalar Depencia do Projeto
         run: |
-          pip install -r requirements.txt
-
-      - name: Baixar e configurar WebDriver (Chrome e ChromeDriver)
-        run: |
-          sudo apt update
-          sudo apt install -y chromium-browser chromium-chromedriver
-          echo "CHROME_BIN=$(which chromium-browser)" >> $GITHUB_ENV
-          echo "CHROMEDRIVER_BIN=$(which chromedriver)" >> $GITHUB_ENV
+          pip install robotframework
 
       - name: Executar testes do Robot Framework
         run: |
           robot -d results tests/
 
-      - name: Upload de relatórios
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: Relatórios Robot Framework
-          path: results/
