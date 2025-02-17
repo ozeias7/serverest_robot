@@ -17,7 +17,7 @@ jobs:
     
       - name: Instalar Depencia do Projeto
         run: |
-          pip install robotframework
+          pip install -r requirements.txt
 
       - name: Executar testes do Robot Framework
         run: |
