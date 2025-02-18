@@ -10,7 +10,7 @@ Test Teardown         Fechar o Navegdor
 
 
 
-*** Test Case ***
+*** Test Cases ***
 Cenário 01: Validando cenário de login valido
     [Tags]       login_01
     Dado que o usuario esteja na pagina de login do serverest

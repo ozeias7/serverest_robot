@@ -12,8 +12,8 @@ Test Teardown         Fechar o Navegdor
 
 
 
-*** Test Case ***
-Cenário 01: Realizar compra de produto com sucesso
+*** Test Cases ***
+Cenário 01: Realizar compra de produto com sucesso    
     [Tags]       login_01
     Dado que o usuario esteja na pagina de login do serverest
     Quando inserir as credenciais e logar
