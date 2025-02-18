@@ -1,5 +1,7 @@
-robotframework
-robotframework-seleniumlibrary
-robotframework-pabot
-robotframework-gherkin
-robotframework-requests
+
+robotframework==6.1.1
+robotframework-seleniumlibrary==6.1.3
+robotframework-gherkin==3.1.2
+robotframework-pabot==2.12.0
+selenium==4.9.1
+chromedriver-autoinstaller==0.5.4
