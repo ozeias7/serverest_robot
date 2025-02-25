@@ -1,3 +1,4 @@
+
 name: Pipeline Test
 
 on: push
@@ -17,9 +18,7 @@ jobs:
     
       - name: Instalar Depencia do Projeto
         run: |
-          pyton -m pip install --upgrade pip
-          pip install build
-          pip install -r requirements.txt
+          pip install robotframework
 
       - name: Executar testes do Robot Framework
         run: |
