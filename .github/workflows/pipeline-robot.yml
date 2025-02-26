@@ -19,6 +19,7 @@ jobs:
       - name: Instalar Depencia do Projeto
         run: |
           pip install robotframework
+          pip install robotframework-seleniumlibrary
 
       - name: Executar testes do Robot Framework
         run: |
